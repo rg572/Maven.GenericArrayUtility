@@ -52,6 +52,7 @@ public class ArrayUtility<T> {
                 }
             }
         }
+        
         for(int i = 0; i < arrayToMerge.length; i++){
             if(!beenCheckedToMerge[i]){
                 Integer amount = 1;
@@ -88,8 +89,7 @@ public class ArrayUtility<T> {
                 count++;
             }
         }
-        Class classs = value.getClass();
-        T[] returnArray = (T[]) Array.newInstance(classs, storedArray.length - count);
+        T[] returnArray = (T[]) Array.newInstance(value.getClass(), storedArray.length - count);
         Integer index = 0;
         for(T t : storedArray){
             if(!t.equals(value)){
